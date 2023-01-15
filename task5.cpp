@@ -1,85 +1,80 @@
 #include<iostream>
-#include<windows.h>
-void gotoxy(int x,int y);
 using namespace std;
-
-  void gotoxy(int x,int y)
+float checkFruit(string fruit,string day,int quantity);
+main()
 {
-  COORD coordinates;
-  coordinates.X =x;
-  coordinates.Y =y;
-  SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
+    string fruit;
+    string day;
+    int quantity;
+    float price;
+    cout<<"Enter fruit=";
+    cin>>fruit;
+    cout<<"Enter day=";
+    cin>>day;
+    cout<<"Enter quantity=";
+    cin>>quantity;
+    price=checkFruit(fruit,day,quantity);
+    cout<<"total price="<<price<<endl;
+
 }
-  int main()
-{
-  system("cls");
-gotoxy(5,3);
-cout<<"      :::::::::: "<<endl;
-gotoxy(5,4);
-cout<<"      ::           "<<endl;
-gotoxy(5,5);
-cout<<"      :::::::::: "<<endl;
-gotoxy(5,6);
-cout<<"      ::           "<<endl;
-gotoxy(5,7);
-cout<<"      ::           "<<endl;
-gotoxy(5,8);
-cout<<"      ::           "<<endl;
-gotoxy(5,9);
-cout<<"      ::           "<<endl<<endl;
-
-
-gotoxy(5,12);
-cout<<"      ::  "<<endl;
-gotoxy(5,13);
-cout<<"      ::  "<<endl;
-gotoxy(5,14);
-cout<<"      ::  "<<endl;
-gotoxy(5,15);
-cout<<"      ::  "<<endl;
-gotoxy(5,16);
-cout<<"      ::  "<<endl;
-gotoxy(5,17);
-cout<<"      ::  "<<endl;
-gotoxy(5,18);
-cout<<"      ::  "<<endl;
-gotoxy(5,21);
-cout<<"      :::::::%%%%%%: "<<endl;
-gotoxy(5,22); 
-cout<<"      ::            %::"<<endl;
-gotoxy(5,23);        
-cout<<"      ::            %::"<<endl;
-gotoxy(5,24); 
-cout<<"      ::            %::"<<endl;
-gotoxy(5,25); 
-cout<<"      ::            %::"<<endl;
-gotoxy(5,26); 
-cout<<"      ::            %::"<<endl;
-gotoxy(5,27); 
-cout<<"      ::            %::"<<endl;
-gotoxy(5,28); 
-cout<<"      ::            ::"<<endl; 
-gotoxy(5,29);
-cout<<"      :::::::::::%%%"<<endl;
-gotoxy(5,31); 
-cout<<"      ::::::::::  "<<endl;
-gotoxy(5,32);
-cout<<"      :        : "<<endl;
-gotoxy(5,33); 
-cout<<"      :        : "<<endl; 
-gotoxy(5,34);
-cout<<"      :        : "<<endl;
-gotoxy(5,35); 
-cout<<"      :::::::::: "<<endl;
-gotoxy(5,36);         
-cout<<"      :        : "<<endl;
-gotoxy(5,37); 
-cout<<"      :        : "<<endl; 
-gotoxy(5,38);
-cout<<"      :        : "<<endl; 
-gotoxy(5,39);
-cout<<"      :        : "<<endl;
- 
-}
-
-
+ float checkFruit(string fruit,string day,int quantity)
+ {
+    float price2;
+    if(fruit=="banana"&& day!="sunday")
+    {
+        price2=quantity*2.50;
+    }
+    if(fruit=="apple" && day!="sunday")
+    {
+        price2=quantity*1.20;
+    }
+      if(fruit=="orange" && day!="sunday")
+    {
+        price2=quantity*0.85;
+    }
+     if(fruit=="grapefruit" && day!="sunday")
+    {
+        price2=quantity*1.45;
+    }
+     if(fruit=="kiwi" && day!="sunday")
+    {
+        price2=quantity*2.70;
+    }
+     if(fruit=="pineapple" && day!="sunday")
+    {
+        price2=quantity*5.50;
+    }
+     if(fruit=="grapes" && day!="sunday")
+    {
+        price2=quantity*3.85;
+    }
+     if(fruit=="banana"&& day=="sunday")
+    {
+        price2=quantity*2.70;
+    }
+       if(fruit=="apple"&& day=="sunday")
+    {
+        price2=quantity*1.25;
+    }
+      if(fruit=="orange"&& day=="sunday")
+    {
+        price2=quantity*0.90;
+    }
+       if(fruit=="grapefruit"&& day=="sunday")
+    {
+        price2=quantity*1.60;
+    }
+      if(fruit=="kiwi"&& day=="sunday")
+    {
+        price2=quantity*3.00;
+    }
+      if(fruit=="pineapple"&& day=="sunday")
+    {
+        price2=quantity*5.60;
+    }
+       if(fruit=="grapes"&& day=="sunday")
+    {
+        price2=quantity*4.20;
+    }
+    return price2;
+ }

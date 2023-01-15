@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+float checkPrice(string month ,float stays,string room);
+main()
+{
+    float total;
+    string month;
+    float stays;
+    string room;
+    cout<<"Enter month";
+    cin>>month;
+    cout<<"Enter stays";
+    cin>>stays;
+    cout<<"Enter room";
+    cin>>room;  
+    total=checkPrice(month,stays,room);
+    cout<<"total price ="<<total;
+
+}
+  float checkPrice(string month ,float stays,string room)
+{
+  float total2;
+  
+  if((stays>7) && (month=="may"||month=="october")&&(room=="studio"))
+   {
+       total2 = (50 * stays)  * (0.05);     
+   }
+   if((stays>14) && (month=="may"||month=="october")&&(room=="studio"))
+   {
+       total2 = (50 * stays)  * (0.3);     
+   } 
+ return total2;
+
+}   

@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+string sign(int date,int month);
+main()
+{
+    string output;
+    int date;
+    int month;
+    output=sign(date,month);
+    cout<<"Output sign"<<output<<endl;
+}
+  string sign(int date,int month)
+  {
+    string sign2;
+    if(month==3 && date>=21)&&( month==4 && date<=19)
+    {
+       
+        
+     sign2="Aries";
+        
+    }
+}
+  
